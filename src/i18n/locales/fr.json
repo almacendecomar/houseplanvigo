@@ -1,0 +1,187 @@
+{
+  "common": {
+    "home": "Accueil",
+    "gallery": "Galerie",
+    "book": "Réserver",
+    "location": "Emplacement",
+    "from": "à partir de",
+    "perNight": "par nuit",
+    "viewGallery": "Voir la galerie",
+    "contact": "Contact",
+    "email": "Email",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "privacyPolicy": "Politique de confidentialité",
+    "legalNotice": "Mentions légales",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "all": "Tous",
+    "menu": "Menu"
+  },
+  "home": {
+    "hero": {
+      "title": "Confort et tranquillité dans une ville privilégiée",
+      "subtitle": "Profitez d'une expérience unique dans notre hébergement touristique à Vigo",
+      "cta": "Réserver maintenant"
+    },
+    "features": {
+      "title": "Tout ce dont vous avez besoin pour un séjour parfait",
+      "subtitle": "Notre hébergement est équipé de tout le confort pour rendre votre expérience inoubliable",
+      "beds": "lits",
+      "bathrooms": "salles de bain",
+      "guests": "voyageurs",
+      "kitchen": "Cuisine équipée",
+      "wifi": "WiFi haut débit",
+      "views": "Vues panoramiques"
+    },
+    "about": {
+      "title": "À propos de Houseplan",
+      "subtitle": "Un refuge exclusif dans la nature",
+      "description": "Bienvenue à Houseplan, un hébergement fantastique situé sur l'Avenue de Castelao à Vigo, avec de grands parcs et jardins, et des vues impressionnantes sur la ria et le port."
+    },
+    "testimonials": {
+      "title": "Ce que disent nos clients",
+      "subtitle": "Expériences de ceux qui ont déjà profité de Houseplan"
+    },
+    "cta": {
+      "title": "Prêt à profiter d'une expérience unique ?",
+      "subtitle": "Réservez maintenant et profitez du confort et de la tranquillité dans l'un des meilleurs quartiers de Vigo"
+    }
+  },
+  "booking": {
+    "title": "Réservez votre séjour",
+    "subtitle": "Sélectionnez les dates, entrez vos coordonnées et effectuez le paiement en toute sécurité",
+    "steps": {
+      "dates": "Dates et Voyageurs",
+      "info": "Informations Voyageur",
+      "payment": "Paiement",
+      "confirmation": "Confirmation"
+    },
+    "calendar": {
+      "selectDates": "Sélectionnez les dates d'arrivée et de départ",
+      "checkIn": "Arrivée",
+      "checkOut": "Départ",
+      "guests": "Voyageurs",
+      "minNights": "Séjour minimum",
+      "nights": "nuits",
+      "price": "Prix",
+      "total": "Total",
+      "cleaningFee": "Frais de ménage"
+    },
+    "guestInfo": {
+      "title": "Informations Voyageur",
+      "fullName": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "document": {
+        "type": "Type de document",
+        "number": "Numéro de document",
+        "dni": "Carte d'identité",
+        "passport": "Passeport",
+        "other": "Autre"
+      },
+      "address": {
+        "street": "Rue et numéro",
+        "city": "Ville",
+        "postalCode": "Code postal",
+        "country": "Pays"
+      },
+      "specialRequests": "Demandes spéciales",
+      "privacyPolicy": "J'ai lu et j'accepte la politique de confidentialité et les mentions légales"
+    },
+    "payment": {
+      "title": "Effectuer le paiement",
+      "totalToPay": "Total à payer",
+      "securePayment": "Paiement sécurisé par PayPal ou carte bancaire",
+      "processing": "Traitement du paiement...",
+      "success": "Paiement réussi !",
+      "error": "Erreur de paiement"
+    },
+    "confirmation": {
+      "title": "Réservation confirmée !",
+      "emailSent": "Nous avons envoyé les détails à votre email",
+      "bookingReference": "Référence de réservation",
+      "dates": "Dates",
+      "guests": "Voyageurs",
+      "holder": "Titulaire de la réservation",
+      "totalPaid": "Total payé",
+      "whatNow": "Que se passe-t-il maintenant ?",
+      "instructions": "Nous vous avons envoyé un email avec tous les détails de votre réservation, y compris les instructions d'arrivée et les informations de contact"
+    }
+  },
+  "gallery": {
+    "title": "Galerie Houseplan",
+    "subtitle": "Découvrez tous les espaces de notre hébergement",
+    "viewLarger": "Voir l'image en grand",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "close": "Fermer"
+  },
+  "location": {
+    "title": "Emplacement",
+    "subtitle": "Découvrez où se trouve Houseplan et les points d'intérêt à proximité",
+    "address": {
+      "title": "Adresse",
+      "street": "Avenue de Castelao",
+      "city": "Vigo",
+      "province": "Pontevedra",
+      "country": "Espagne"
+    },
+    "poi": {
+      "title": "Points d'intérêt à proximité",
+      "distance": "Distance",
+      "minutes": "minutes"
+    }
+  },
+  "admin": {
+    "login": {
+      "title": "Panneau d'administration",
+      "subtitle": "Accédez avec vos identifiants",
+      "email": "Email",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "error": "Identifiants invalides"
+    },
+    "dashboard": {
+      "title": "Tableau de bord",
+      "stats": {
+        "totalBookings": "Total des réservations",
+        "upcomingBookings": "Arrivées à venir",
+        "totalGuests": "Total des voyageurs",
+        "revenue": "Revenus"
+      }
+    },
+    "calendar": {
+      "title": "Gestion du calendrier",
+      "sync": "Synchroniser les calendriers",
+      "addCalendar": "Ajouter un calendrier",
+      "connected": "Calendriers connectés"
+    },
+    "pricing": {
+      "title": "Gestion des prix",
+      "basePricing": "Prix de base",
+      "seasonal": "Prix saisonniers",
+      "special": "Prix spéciaux"
+    },
+    "gallery": {
+      "title": "Gestion de la galerie",
+      "upload": "Télécharger des images",
+      "dragDrop": "Glissez les images ici ou cliquez pour sélectionner"
+    },
+    "settings": {
+      "title": "Paramètres",
+      "general": "Général",
+      "notifications": "Notifications",
+      "security": "Sécurité",
+      "api": "Clés API"
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "common": {
+    "home": "Inicio",
+    "gallery": "Galería",
+    "book": "Reservar",
+    "location": "Ubicación",
+    "from": "desde",
+    "perNight": "por noche",
+    "viewGallery": "Ver galería",
+    "contact": "Contacto",
+    "email": "Email",
+    "phone": "Teléfono",
+    "address": "Dirección",
+    "privacyPolicy": "Política de Privacidad",
+    "legalNotice": "Aviso Legal",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Cerrar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "all": "Todos",
+    "menu": "Menú"
+  },
+  "home": {
+    "hero": {
+      "title": "Confort y tranquilidad en una ciudad privilegiada",
+      "subtitle": "Disfruta de una experiencia única en nuestro alojamiento turístico en Vigo",
+      "cta": "Reservar ahora"
+    },
+    "features": {
+      "title": "Todo lo que necesitas para una estancia perfecta",
+      "subtitle": "Nuestro alojamiento está equipado con todas las comodidades para que tu experiencia sea inolvidable",
+      "beds": "camas",
+      "bathrooms": "baños",
+      "guests": "huéspedes",
+      "kitchen": "Cocina equipada",
+      "wifi": "WiFi de alta velocidad",
+      "views": "Vistas panorámicas"
+    },
+    "about": {
+      "title": "Sobre Houseplan",
+      "description": "Bienvenido a Houseplan, un fantástico alojamiento turístico situado en la Avenida de Castelao, en pleno corazón de Vigo. Rodeado de amplios parques, zonas verdes y jardines, Houseplan ofrece un entorno perfecto para el descanso, combinando comodidad, estilo y una ubicación privilegiada.\n\nDesde sus estancias podrás disfrutar de unas impresionantes vistas a la ría y al puerto de Vigo, creando el escenario ideal tanto para unas vacaciones tranquilas como para una escapada de trabajo.\n\nEn Houseplan cuidamos cada detalle para que tu estancia sea inolvidable. ¡Te esperamos!"
+    },
+    "testimonials": {
+      "title": "Lo que dicen nuestros huéspedes",
+      "subtitle": "Experiencias de quienes ya han disfrutado de Houseplan"
+    },
+    "cta": {
+      "title": "¿Listo para disfrutar de una experiencia única?",
+      "subtitle": "Reserva ahora y disfruta del confort y la tranquilidad en una de las mejores zonas de Vigo"
+    }
+  },
+  "booking": {
+    "title": "Reserva tu estancia",
+    "subtitle": "Selecciona las fechas, introduce tus datos y realiza el pago de forma segura",
+    "steps": {
+      "dates": "Fechas y huéspedes",
+      "info": "Datos del huésped",
+      "payment": "Pago",
+      "confirmation": "Confirmación"
+    },
+    "calendar": {
+      "selectDates": "Selecciona fechas de entrada y salida",
+      "checkIn": "Entrada",
+      "checkOut": "Salida",
+      "guests": "Huéspedes",
+      "minNights": "Estancia mínima",
+      "nights": "noches",
+      "price": "Precio",
+      "total": "Total",
+      "cleaningFee": "Tarifa de limpieza"
+    },
+    "guestInfo": {
+      "title": "Información del huésped",
+      "fullName": "Nombre completo",
+      "email": "Email",
+      "phone": "Teléfono",
+      "document": {
+        "type": "Tipo de documento",
+        "number": "Número de documento",
+        "dni": "DNI",
+        "passport": "Pasaporte",
+        "other": "Otro"
+      },
+      "address": {
+        "street": "Calle y número",
+        "city": "Ciudad",
+        "postalCode": "Código postal",
+        "country": "País"
+      },
+      "specialRequests": "Peticiones especiales",
+      "privacyPolicy": "He leído y acepto la política de privacidad y el aviso legal"
+    },
+    "payment": {
+      "title": "Realizar pago",
+      "totalToPay": "Total a pagar",
+      "securePayment": "Pago seguro a través de PayPal o tarjeta de crédito",
+      "processing": "Procesando pago...",
+      "success": "¡Pago realizado con éxito!",
+      "error": "Error en el pago"
+    },
+    "confirmation": {
+      "title": "¡Reserva confirmada!",
+      "emailSent": "Hemos enviado los detalles a tu correo electrónico",
+      "bookingReference": "Referencia de reserva",
+      "dates": "Fechas",
+      "guests": "Huéspedes",
+      "holder": "Titular de la reserva",
+      "totalPaid": "Total pagado",
+      "whatNow": "¿Qué sucede ahora?",
+      "instructions": "Te hemos enviado un correo electrónico con todos los detalles de tu reserva, incluyendo instrucciones para el check-in y la información de contacto"
+    }
+  },
+  "gallery": {
+    "title": "Galería de Houseplan",
+    "subtitle": "Descubre todos los espacios de nuestro alojamiento",
+    "viewLarger": "Ver imagen ampliada",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "close": "Cerrar"
+  },
+  "location": {
+    "title": "Ubicación",
+    "subtitle": "Descubre dónde se encuentra Houseplan y los puntos de interés cercanos",
+    "address": {
+      "title": "Dirección",
+      "street": "Avenida de Castelao",
+      "city": "Vigo",
+      "province": "Pontevedra",
+      "country": "España"
+    },
+    "poi": {
+      "title": "Puntos de interés cercanos",
+      "distance": "Distancia",
+      "minutes": "minutos"
+    }
+  },
+  "admin": {
+    "login": {
+      "title": "Panel de Administración",
+      "subtitle": "Accede con tus credenciales",
+      "email": "Email",
+      "password": "Contraseña",
+      "submit": "Acceder",
+      "error": "Credenciales incorrectas"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "stats": {
+        "totalBookings": "Reservas totales",
+        "upcomingBookings": "Próximas llegadas",
+        "totalGuests": "Total huéspedes",
+        "revenue": "Ingresos"
+      }
+    },
+    "calendar": {
+      "title": "Gestión de Calendario",
+      "sync": "Sincronizar calendarios",
+      "addCalendar": "Añadir calendario",
+      "connected": "Calendarios conectados"
+    },
+    "pricing": {
+      "title": "Gestión de Precios",
+      "basePricing": "Precios base",
+      "seasonal": "Precios por temporada",
+      "special": "Precios especiales"
+    },
+    "gallery": {
+      "title": "Gestión de Galería",
+      "upload": "Subir imágenes",
+      "dragDrop": "Arrastra imágenes aquí o haz clic para seleccionar"
+    },
+    "settings": {
+      "title": "Configuración",
+      "general": "General",
+      "notifications": "Notificaciones",
+      "security": "Seguridad",
+      "api": "Claves API"
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "common": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "book": "Book",
+    "location": "Location",
+    "from": "from",
+    "perNight": "per night",
+    "viewGallery": "View Gallery",
+    "contact": "Contact",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "privacyPolicy": "Privacy Policy",
+    "legalNotice": "Legal Notice",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "search": "Search",
+    "filter": "Filter",
+    "all": "All",
+    "menu": "Menu"
+  },
+  "home": {
+    "hero": {
+      "title": "Comfort and tranquility in a privileged city",
+      "subtitle": "Enjoy a unique experience in our tourist accommodation in Vigo",
+      "cta": "Book now"
+    },
+    "features": {
+      "title": "Everything you need for a perfect stay",
+      "subtitle": "Our accommodation is equipped with all the amenities to make your experience unforgettable",
+      "beds": "beds",
+      "bathrooms": "bathrooms",
+      "guests": "guests",
+      "kitchen": "Equipped kitchen",
+      "wifi": "High-speed WiFi",
+      "views": "Panoramic views"
+    },
+    "about": {
+      "title": "About Houseplan",
+      "subtitle": "An exclusive refuge in nature",
+      "description": "Welcome to Houseplan, a fantastic accommodation located on Avenida de Castelao in Vigo, with large parks and gardens, and impressive views of the estuary and port."
+    },
+    "testimonials": {
+      "title": "What our guests say",
+      "subtitle": "Experiences from those who have already enjoyed Houseplan"
+    },
+    "cta": {
+      "title": "Ready to enjoy a unique experience?",
+      "subtitle": "Book now and enjoy comfort and tranquility in one of the best areas of Vigo"
+    }
+  },
+  "booking": {
+    "title": "Book your stay",
+    "subtitle": "Select dates, enter your details and make payment securely",
+    "steps": {
+      "dates": "Dates & Guests",
+      "info": "Guest Information",
+      "payment": "Payment",
+      "confirmation": "Confirmation"
+    },
+    "calendar": {
+      "selectDates": "Select check-in and check-out dates",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "guests": "Guests",
+      "minNights": "Minimum stay",
+      "nights": "nights",
+      "price": "Price",
+      "total": "Total",
+      "cleaningFee": "Cleaning fee"
+    },
+    "guestInfo": {
+      "title": "Guest Information",
+      "fullName": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "document": {
+        "type": "Document Type",
+        "number": "Document Number",
+        "dni": "ID Card",
+        "passport": "Passport",
+        "other": "Other"
+      },
+      "address": {
+        "street": "Street and number",
+        "city": "City",
+        "postalCode": "Postal Code",
+        "country": "Country"
+      },
+      "specialRequests": "Special Requests",
+      "privacyPolicy": "I have read and accept the privacy policy and legal notice"
+    },
+    "payment": {
+      "title": "Make Payment",
+      "totalToPay": "Total to pay",
+      "securePayment": "Secure payment through PayPal or credit card",
+      "processing": "Processing payment...",
+      "success": "Payment successful!",
+      "error": "Payment error"
+    },
+    "confirmation": {
+      "title": "Booking confirmed!",
+      "emailSent": "We have sent the details to your email",
+      "bookingReference": "Booking reference",
+      "dates": "Dates",
+      "guests": "Guests",
+      "holder": "Booking holder",
+      "totalPaid": "Total paid",
+      "whatNow": "What happens now?",
+      "instructions": "We have sent you an email with all your booking details, including check-in instructions and contact information"
+    }
+  },
+  "gallery": {
+    "title": "Houseplan Gallery",
+    "subtitle": "Discover all the spaces of our accommodation",
+    "viewLarger": "View larger image",
+    "previous": "Previous",
+    "next": "Next",
+    "close": "Close"
+  },
+  "location": {
+    "title": "Location",
+    "subtitle": "Discover where Houseplan is located and nearby points of interest",
+    "address": {
+      "title": "Address",
+      "street": "Avenida de Castelao",
+      "city": "Vigo",
+      "province": "Pontevedra",
+      "country": "Spain"
+    },
+    "poi": {
+      "title": "Nearby Points of Interest",
+      "distance": "Distance",
+      "minutes": "minutes"
+    }
+  },
+  "admin": {
+    "login": {
+      "title": "Admin Panel",
+      "subtitle": "Access with your credentials",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Login",
+      "error": "Invalid credentials"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "stats": {
+        "totalBookings": "Total Bookings",
+        "upcomingBookings": "Upcoming Arrivals",
+        "totalGuests": "Total Guests",
+        "revenue": "Revenue"
+      }
+    },
+    "calendar": {
+      "title": "Calendar Management",
+      "sync": "Sync calendars",
+      "addCalendar": "Add calendar",
+      "connected": "Connected calendars"
+    },
+    "pricing": {
+      "title": "Pricing Management",
+      "basePricing": "Base Pricing",
+      "seasonal": "Seasonal Pricing",
+      "special": "Special Pricing"
+    },
+    "gallery": {
+      "title": "Gallery Management",
+      "upload": "Upload images",
+      "dragDrop": "Drag images here or click to select"
+    },
+    "settings": {
+      "title": "Settings",
+      "general": "General",
+      "notifications": "Notifications",
+      "security": "Security",
+      "api": "API Keys"
+    }
+  }
+}
