@@ -1,12 +1,11 @@
 
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import LoadingSpinner from './components/common/LoadingSpinner';
 import { AdminProvider } from './contexts/AdminContext';
-import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase';
-import { useEffect, useState } from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const GalleryPage = lazy(() => import('./pages/GalleryPage'));
@@ -21,19 +20,17 @@ const AdminCalendarPage = lazy(() => import('./pages/admin/AdminCalendarPage'));
 const AdminPricingPage = lazy(() => import('./pages/admin/AdminPricingPage'));
 const AdminGalleryPage = lazy(() => import('./pages/admin/AdminGalleryPage'));
 const AdminSettingsPage = lazy(() => import('./pages/admin/AdminSettingsPage'));
-
 const Dashboard = lazy(() => import('./components/Dashboard'));
 const UserProfile = lazy(() => import('./components/UserProfile'));
 
-// Componente que protege rutas privadas
 const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
-  const [user, setUser] = useState<null | object>(undefined); // undefined = aún cargando
+  const [user, setUser] = useState<null | object>(undefined);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+    const unsub = onAuthStateChanged(auth, (firebaseUser) => {
       setUser(firebaseUser);
     });
-    return () => unsubscribe();
+    return () => unsub();
   }, []);
 
   if (user === undefined) return <LoadingSpinner />;
@@ -53,6 +50,8 @@ function App() {
             <Route path="/ubicacion" element={<LocationPage />} />
             <Route path="/privacidad" element={<PrivacyPolicyPage />} />
             <Route path="/aviso-legal" element={<LegalNoticePage />} />
+
+            {/* Admin pages */}
             <Route path="/admin" element={<AdminLoginPage />} />
             <Route path="/admin/dashboard" element={<AdminDashboardPage />} />
             <Route path="/admin/calendar" element={<AdminCalendarPage />} />
@@ -60,7 +59,7 @@ function App() {
             <Route path="/admin/gallery" element={<AdminGalleryPage />} />
             <Route path="/admin/settings" element={<AdminSettingsPage />} />
 
-            {/* 🔐 Rutas con Firebase Auth */}
+            {/* Auth pages */}
             <Route path="/auth" element={<Dashboard />} />
             <Route
               path="/perfil"
