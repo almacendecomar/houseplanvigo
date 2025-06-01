@@ -1,8 +1,11 @@
+
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import LoadingSpinner from './components/common/LoadingSpinner';
 import { AdminProvider } from './contexts/AdminContext';
+import Dashboard from './components/Dashboard';
+import UserProfile from './components/UserProfile';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage'));
@@ -37,6 +40,11 @@ function App() {
             <Route path="/admin/pricing" element={<AdminPricingPage />} />
             <Route path="/admin/gallery" element={<AdminGalleryPage />} />
             <Route path="/admin/settings" element={<AdminSettingsPage />} />
+
+            {/* Firebase Auth views */}
+            <Route path="/auth" element={<Dashboard />} />
+            <Route path="/perfil" element={<UserProfile />} />
+
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>
