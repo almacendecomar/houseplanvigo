@@ -6,6 +6,7 @@ import LoadingSpinner from './components/common/LoadingSpinner';
 import { AdminProvider } from './contexts/AdminContext';
 import { auth } from './firebase';
 import { onAuthStateChanged } from 'firebase/auth';
+const BookingCalendarAirbnb = lazy(() => import('./components/booking/BookingCalendarAirbnb'));
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const GalleryPage = lazy(() => import('./pages/GalleryPage'));
