@@ -1,3 +1,4 @@
+src/components/booking/CalendarFromIcs.tsx
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import { useIcalEvents } from '../../hooks/useIcalEvents';
