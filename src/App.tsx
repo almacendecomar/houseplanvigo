@@ -6,7 +6,6 @@ import LoadingSpinner from './components/common/LoadingSpinner';
 import { AdminProvider } from './contexts/AdminContext';
 import { auth } from './firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-const BookingCalendarAirbnb = lazy(() => import('./components/booking/BookingCalendarAirbnb'));
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const GalleryPage = lazy(() => import('./pages/GalleryPage'));
@@ -23,6 +22,7 @@ const AdminGalleryPage = lazy(() => import('./pages/admin/AdminGalleryPage'));
 const AdminSettingsPage = lazy(() => import('./pages/admin/AdminSettingsPage'));
 const Dashboard = lazy(() => import('./components/Dashboard'));
 const UserProfile = lazy(() => import('./components/UserProfile'));
+const BookingCalendarAirbnb = lazy(() => import('./components/booking/BookingCalendarAirbnb'));
 
 const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
   const [user, setUser] = useState<null | object>(undefined);
@@ -71,6 +71,9 @@ function App() {
               }
             />
 
+            {/* Calendario sincronizado con Airbnb */}
+            <Route path="/calendario-airbnb" element={<BookingCalendarAirbnb />} />
+
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>
@@ -80,3 +83,4 @@ function App() {
 }
 
 export default App;
+
