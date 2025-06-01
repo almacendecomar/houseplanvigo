@@ -1,5 +1,4 @@
 const CalendarFromIcs = lazy(() => import('./components/booking/CalendarFromIcs'));
-
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
@@ -61,6 +60,10 @@ function App() {
             <Route path="/admin/gallery" element={<AdminGalleryPage />} />
             <Route path="/admin/settings" element={<AdminSettingsPage />} />
             <Route path="/calendario-airbnb" element={<CalendarFromIcs />} />
+            <Route path="/admin/dashboard" element={
+  <ProtectedRoute><AdminDashboardPage /></ProtectedRoute>
+} />
+
 
 
             {/* Auth pages */}
