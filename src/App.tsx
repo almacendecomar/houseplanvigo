@@ -1,4 +1,4 @@
-import { firebaseApp } from './firebase'
+import './firebase'
 const CalendarFromIcs = lazy(() => import('./components/booking/CalendarFromIcs'));
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
