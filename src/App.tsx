@@ -6,6 +6,7 @@ import LoadingSpinner from './components/common/LoadingSpinner';
 import { AdminProvider } from './contexts/AdminContext';
 import { auth } from './firebase';
 import { onAuthStateChanged } from 'firebase/auth';
+import ProtectedRoute from './components/common/ProtectedRoute'; // ajusta según la carpeta donde lo pongas
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const GalleryPage = lazy(() => import('./pages/GalleryPage'));
