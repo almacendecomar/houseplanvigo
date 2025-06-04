@@ -1,4 +1,1 @@
 /*    /index.html   200
-git add public/_redirects
-git commit -m "Fix Netlify SPA routing"
-git push
