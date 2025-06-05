@@ -1,4 +1,3 @@
-
 // src/pages/admin/AdminDashboardPage.tsx
 import { Link } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
@@ -38,6 +37,11 @@ const AdminDashboardPage = () => {
         <Link to="/calendario-airbnb" className="bg-white shadow p-4 rounded hover:bg-teal-50 transition">
           <h2 className="text-lg font-semibold text-teal-700">🔄 Airbnb</h2>
           <p className="text-sm text-gray-600">Ver fechas desde Airbnb (.ics).</p>
+        </Link>
+
+        <Link to="/admin/sync" className="bg-white shadow p-4 rounded hover:bg-teal-50 transition">
+          <h2 className="text-lg font-semibold text-teal-700">🔁 Sincronizar Airbnb</h2>
+          <p className="text-sm text-gray-600">Sincroniza automáticamente las reservas desde el archivo .ics</p>
         </Link>
 
         <button
