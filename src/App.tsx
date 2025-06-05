@@ -8,6 +8,17 @@ import { AdminProvider } from './contexts/AdminContext';
 import { auth } from './firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import ProtectedRoute from './components/common/ProtectedRoute'; // ajusta según la carpeta donde lo pongas
+import CalendarDashboard from './components/CalendarDashboard';
+
+function AdminPanel() {
+  return (
+    <div>
+      <CalendarDashboard />
+    </div>
+  );
+}
+
+export default AdminPanel;
 
 
 const HomePage = lazy(() => import('./pages/HomePage'));
