@@ -1,5 +1,4 @@
-import './firebase'
-const CalendarFromIcs = lazy(() => import('./components/booking/CalendarFromIcs'));
+import './firebase';
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
@@ -7,20 +6,8 @@ import LoadingSpinner from './components/common/LoadingSpinner';
 import { AdminProvider } from './contexts/AdminContext';
 import { auth } from './firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-import ProtectedRoute from './components/common/ProtectedRoute'; // ajusta según la carpeta donde lo pongas
-import CalendarDashboard from './components/CalendarDashboard';
 
-function AdminPanel() {
-  return (
-    <div>
-      <CalendarDashboard />
-    </div>
-  );
-}
-
-export default AdminPanel;
-
-
+// Lazy-loaded components
 const HomePage = lazy(() => import('./pages/HomePage'));
 const GalleryPage = lazy(() => import('./pages/GalleryPage'));
 const BookingPage = lazy(() => import('./pages/BookingPage'));
@@ -37,6 +24,9 @@ const AdminSettingsPage = lazy(() => import('./pages/admin/AdminSettingsPage'));
 const Dashboard = lazy(() => import('./components/Dashboard'));
 const UserProfile = lazy(() => import('./components/UserProfile'));
 const BookingCalendarAirbnb = lazy(() => import('./components/booking/BookingCalendarAirbnb'));
+const CalendarFromIcs = lazy(() => import('./components/booking/CalendarFromIcs'));
+const CalendarDashboard = lazy(() => import('./components/CalendarDashboard'));
+const AdminMenu = lazy(() => import('./components/layout/AdminMenu'));
 
 const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
   const [user, setUser] = useState<null | object>(undefined);
@@ -68,32 +58,22 @@ function App() {
 
             {/* Admin pages */}
             <Route path="/admin" element={<AdminLoginPage />} />
-            <Route path="/admin/dashboard" element={<AdminDashboardPage />} />
-            <Route path="/admin/calendar" element={<AdminCalendarPage />} />
-            <Route path="/admin/pricing" element={<AdminPricingPage />} />
-            <Route path="/admin/gallery" element={<AdminGalleryPage />} />
-            <Route path="/admin/settings" element={<AdminSettingsPage />} />
-            <Route path="/calendario-airbnb" element={<CalendarFromIcs />} />
-            <Route path="/admin/dashboard" element={
-  <ProtectedRoute><AdminDashboardPage /></ProtectedRoute>
-} />
+            <Route path="/admin/dashboard" element={<ProtectedRoute><AdminDashboardPage /></ProtectedRoute>} />
+            <Route path="/admin/calendar" element={<ProtectedRoute><AdminCalendarPage /></ProtectedRoute>} />
+            <Route path="/admin/pricing" element={<ProtectedRoute><AdminPricingPage /></ProtectedRoute>} />
+            <Route path="/admin/gallery" element={<ProtectedRoute><AdminGalleryPage /></ProtectedRoute>} />
+            <Route path="/admin/settings" element={<ProtectedRoute><AdminSettingsPage /></ProtectedRoute>} />
+            <Route path="/admin/sync" element={<ProtectedRoute><CalendarDashboard /></ProtectedRoute>} />
 
-
+            {/* Calendario sincronizado */}
+            <Route path="/calendario-airbnb" element={<BookingCalendarAirbnb />} />
+            <Route path="/calendar-ics" element={<CalendarFromIcs />} />
 
             {/* Auth pages */}
             <Route path="/auth" element={<Dashboard />} />
-            <Route
-              path="/perfil"
-              element={
-                <ProtectedRoute>
-                  <UserProfile />
-                </ProtectedRoute>
-              }
-            />
+            <Route path="/perfil" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
 
-            {/* Calendario sincronizado con Airbnb */}
-            <Route path="/calendario-airbnb" element={<BookingCalendarAirbnb />} />
-
+            {/* Página no encontrada */}
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>
@@ -103,4 +83,3 @@ function App() {
 }
 
 export default App;
-
