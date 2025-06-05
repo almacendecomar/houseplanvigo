@@ -1,54 +1,54 @@
+// src/hooks/useIcalEvents.ts
 
 import { useEffect, useState } from 'react';
+import ICAL from 'ical.js';
 
-interface CalendarEvent {
-  title: string;
-  start: string;
-  end: string;
+export interface IcalEvent {
+  uid: string;
+  summary: string;
+  description?: string;
+  startDate: Date;
+  endDate: Date;
+  location?: string;
 }
 
-export function useIcalEvents(icsUrl: string): CalendarEvent[] {
-  const [events, setEvents] = useState<CalendarEvent[]>([]);
+export const useIcalEvents = (icalUrl: string) => {
+  const [events, setEvents] = useState<IcalEvent[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
-    const fetchIcs = async () => {
+    const fetchIcal = async () => {
       try {
-        const res = await fetch(icsUrl);
+        const res = await fetch(icalUrl);
         const text = await res.text();
 
-        const lines = text.split(/\r?\n/);
-        const extractedEvents: CalendarEvent[] = [];
-        let current: any = {};
+        const jcalData = ICAL.parse(text);
+        const vcalendar = new ICAL.Component(jcalData);
+        const vevents = vcalendar.getAllSubcomponents('vevent');
 
-        for (const line of lines) {
-          if (line.startsWith('BEGIN:VEVENT')) {
-            current = {};
-          } else if (line.startsWith('SUMMARY:')) {
-            current.title = line.substring(8);
-          } else if (line.startsWith('DTSTART;VALUE=DATE:')) {
-            current.start = line.substring(19);
-          } else if (line.startsWith('DTEND;VALUE=DATE:')) {
-            current.end = line.substring(17);
-          } else if (line.startsWith('END:VEVENT')) {
-            if (current.start && current.end) {
-              extractedEvents.push({
-                title: current.title || 'Reservado',
-                start: current.start,
-                end: current.end
-              });
-            }
-          }
-        }
+        const parsedEvents: IcalEvent[] = vevents.map((vevent) => {
+          const event = new ICAL.Event(vevent);
+          return {
+            uid: event.uid,
+            summary: event.summary,
+            description: event.description,
+            startDate: event.startDate.toJSDate(),
+            endDate: event.endDate.toJSDate(),
+            location: event.location,
+          };
+        });
 
-        setEvents(extractedEvents);
-      } catch (error) {
-        console.error('Error al cargar el .ics:', error);
+        setEvents(parsedEvents);
+        setLoading(false);
+      } catch (err: any) {
+        setError(err);
+        setLoading(false);
       }
     };
 
-    fetchIcs();
-  }, [icsUrl]);
+    fetchIcal();
+  }, [icalUrl]);
 
-  return events;
-}
-
+  return { events, loading, error };
+};
